@@ -6,7 +6,7 @@ diff -Naur 1/Makefile 2/Makefile
  PATCHLEVEL = 20
  SUBLEVEL = 2
 -EXTRAVERSION =
-+EXTRAVERSION = -linusyang
++EXTRAVERSION = -SenseiSimple.Sleeper
  NAME = Unnamed
  
  # *DOCUMENTATION*
