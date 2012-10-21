@@ -1,0 +1,11 @@
+--- busybox-git/libbb/appletlib.c	2012-10-21 03:10:23.234386488 -0700
++++ busybox-git-mods/libbb/appletlib.c	2012-10-21 04:15:15.518813367 -0700
+@@ -627,7 +627,7 @@
+ 		full_write2_str(bb_banner); /* reuse const string */
+ 		full_write2_str(" multi-call binary.\n"); /* reuse */
+ 		full_write2_str(
+-			"Copyright (C) 1998-2011 Erik Andersen, Rob Landley, Denys Vlasenko\n"
++			"Copyright (C) 1998-2012 Erik Andersen, Rob Landley, Denys Vlasenko\n"
+ 			"and others. Licensed under GPLv2.\n"
+ 			"See source distribution for full notice.\n"
+ 			"\n"
