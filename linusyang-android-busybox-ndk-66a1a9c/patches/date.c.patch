@@ -1,0 +1,18 @@
+From: Chris Novoa <data@envisionyou.com>
+Date: Sun Oct 21 05:58:13 CDT 2012
+Subject: change date.c for NDK toolchain to use .st_mtimensec 
+
+patch modified from 'date.c' by Dan Drown:
+http://dan.drown.org/android/src/busybox/
+---
+--- a/coreutils/date.c	2012-10-21 03:48:48.993077731 -0700
++++ b/coreutils/date.c	2012-10-21 03:47:34.624363435 -0700
+@@ -252,7 +252,7 @@
+ 		xstat(filename, &statbuf);
+ 		ts.tv_sec = statbuf.st_mtime;
+ #if ENABLE_FEATURE_DATE_NANO
+-		ts.tv_nsec = statbuf.st_mtim.tv_nsec;
++		ts.tv_nsec = statbuf.st_mtimensec;
+ 		/* Some toolchains use .st_mtimensec instead of st_mtim.tv_nsec.
+ 		 * If you need #define _SVID_SOURCE 1 to enable st_mtim.tv_nsec,
+ 		 * drop a mail to project mailing list please
